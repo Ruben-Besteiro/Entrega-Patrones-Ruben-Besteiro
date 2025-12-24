@@ -1,3 +1,4 @@
+using System;
 using Unity.Hierarchy;
 using UnityEngine;
 
@@ -24,12 +25,15 @@ public class SeekState : IState
     {
         if (lookAtPlayer)
         {
-            // Si nos movemos una cantidad microscópica por bugs de Unity no pasa nada
-            if ((playerPos - player.transform.position).magnitude > 0.1f || Quaternion.Angle(playerRot, player.transform.rotation) > 0.1f)
+            if (player != null)
             {
-                enemy.GetComponent<NavMeshMoveController>().enabled = true;
-                if (!GameManager.Instance.enemiesChasing) GameManager.Instance.enemiesChasing = true;         // Con esto paramos el reloj
-                enemy.stateMachine.ChangeState(enemy.stateMachine.ChaseState);
+                // Si nos movemos una cantidad microscópica por bugs de Unity no pasa nada
+                if ((playerPos - player.transform.position).magnitude > 0.1f || Quaternion.Angle(playerRot, player.transform.rotation) > 0.1f)
+                {
+                    enemy.GetComponent<NavMeshMoveController>().enabled = true;
+                    if (!GameManager.Instance.enemiesChasing) GameManager.Instance.enemiesChasing = true;         // Con esto paramos el reloj
+                    enemy.stateMachine.ChangeState(enemy.stateMachine.ChaseState);
+                }
             }
         }
     }

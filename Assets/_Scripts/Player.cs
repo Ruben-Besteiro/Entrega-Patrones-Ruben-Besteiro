@@ -14,14 +14,11 @@ public class Player : MonoBehaviour
 
     [Header("Stuff")]
     [SerializeField] float maxSpeed = 10;
-    [SerializeField] float sensibilityX = 0.1f;
     [SerializeField] float sensibilityY = 0.05f;
     [SerializeField] Transform cameraTransform;
     Rigidbody rb;
     [SerializeField] GameObject bullet;
     [SerializeField] GameObject shootPosition;
-
-    private float rotacionX = 0;
 
     private void Awake()
     {
@@ -31,6 +28,14 @@ public class Player : MonoBehaviour
         shootAction.action.Enable();
         jumpAction.action.started += Jump;
         shootAction.action.started += Shoot;
+    }
+
+    public void DisableAllActions()
+    {
+        moveAction.action.Disable();
+        jumpAction.action.Disable();
+        lookAction.action.Disable();
+        shootAction.action.Disable();
     }
 
     void Start()

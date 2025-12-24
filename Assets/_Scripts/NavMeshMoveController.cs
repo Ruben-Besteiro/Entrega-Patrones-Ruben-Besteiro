@@ -1,13 +1,12 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class NavMeshMoveController : MonoBehaviour
 {
-    [SerializeField]
-    private Transform playerPos;
-    [SerializeField]
-    private NavMeshAgent agent;
-    private Vector3 destinationPoint;
+    [SerializeField] private GameObject player;
+    [SerializeField] private Transform playerPos;
+    [SerializeField] private NavMeshAgent agent;
 
     public void StartMovement()
     {
@@ -31,12 +30,22 @@ public class NavMeshMoveController : MonoBehaviour
         // Usa la distancia restante del NavMeshAgent
         if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
         {
-            Destroy(playerPos.gameObject);
+            try
+            {
+                // Hacemos una "destrucción falsa" del jugador
+                MeshRenderer[] models = player.GetComponentsInChildren<MeshRenderer>();
+                foreach (MeshRenderer m in models)
+                {
+                    m.enabled = false;
+                }
+                player.GetComponent<Player>().DisableAllActions();
+            } catch (Exception)
+            {
+                print("Excepción");
+            }
             return true;
         }
         return false;
-
-        //return !agent.pathPending && agent.remainingDistance <= agent.stoppingDistance;
     }
 
     public void StopMovement()

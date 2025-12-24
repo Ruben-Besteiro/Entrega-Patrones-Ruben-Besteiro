@@ -1669,7 +1669,6 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 8292004053650217058, guid: 9617d6d34b18a7541a55e18ea59ebf2f, type: 3}
   maxSpeed: 10
-  sensibilityX: 0.1
   sensibilityY: 0.05
   cameraTransform: {fileID: 963194228}
   bullet: {fileID: 1653924882}
@@ -1873,6 +1872,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3036389064370712132, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1947158297}
+    - target: {fileID: 3036389064370712132, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
       propertyPath: playerPos
       value: 
       objectReference: {fileID: 1947158302}
@@ -1941,6 +1944,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3036389064370712132, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1947158297}
     - target: {fileID: 3036389064370712132, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
       propertyPath: playerPos
       value: 
@@ -2011,6 +2018,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3036389064370712132, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1947158297}
+    - target: {fileID: 3036389064370712132, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
       propertyPath: playerPos
       value: 
       objectReference: {fileID: 1947158302}
@@ -2079,6 +2090,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3036389064370712132, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1947158297}
     - target: {fileID: 3036389064370712132, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
       propertyPath: playerPos
       value: 
