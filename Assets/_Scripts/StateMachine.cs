@@ -4,20 +4,14 @@ public class StateMachine
 {
     private IState currentState;
 
-    private SeekState waitState;
-    private ChaseState moveToPointState;
-
-    public IState CurrentState { get { return currentState; } }
-
-    public SeekState SeekState { get { return waitState; } }
-
-    public ChaseState ChaseState { get { return moveToPointState; } }
+    public SeekState seekState;
+    public ChaseState chaseState;
 
     public StateMachine(Enemy enemy)
     {
         // Creamos una variable por cada estado
-        waitState = new SeekState(enemy);
-        moveToPointState = new ChaseState(enemy, enemy.navMeshMoveController);
+        seekState = new SeekState(enemy);
+        chaseState = new ChaseState(enemy, enemy.moveController);
     }
 
     public void Start(IState state)

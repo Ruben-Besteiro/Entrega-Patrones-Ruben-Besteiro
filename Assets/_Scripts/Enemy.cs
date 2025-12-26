@@ -5,19 +5,19 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour, IObserver
 {
     public StateMachine stateMachine;
-    public NavMeshMoveController navMeshMoveController;
+    public NavMeshMoveController moveController;
     public Transform playerPos;
     [SerializeField] public GameObject pared;
 
     public void OnNotify(bool seeking)
     {
-        stateMachine.SeekState.OnNotify(seeking);
+        stateMachine.seekState.OnNotify(seeking);
     }
 
     private void Awake()
     {
         stateMachine = new StateMachine(this);
-        stateMachine.Start(stateMachine.SeekState);
+        stateMachine.Start(stateMachine.seekState);
     }
 
     void Start()

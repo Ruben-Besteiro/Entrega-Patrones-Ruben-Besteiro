@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     List<IObserver> observers = new List<IObserver>();
-    float counter = 1.5f;
+    float counter = 2f;
     [SerializeField] TextMeshProUGUI timeText;
     private bool textIsRed = false;
     public bool enemiesChasing = false;

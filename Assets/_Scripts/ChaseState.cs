@@ -2,18 +2,18 @@ using UnityEngine;
 
 public class ChaseState : IState
 {
-    private Enemy npc;
+    private Enemy enemy;
     private NavMeshMoveController moveController;
 
     public ChaseState(Enemy enemy, NavMeshMoveController moveController)
     {
-        this.npc = enemy;
+        this.enemy = enemy;
         this.moveController = moveController;
     }
 
     public void Enter()
     {
-        Debug.Log(npc.gameObject.name + "Persiguiendo...");
+        Debug.Log(enemy.gameObject.name + "Persiguiendo...");
         moveController.StartMovement();
     }
 
@@ -21,7 +21,7 @@ public class ChaseState : IState
     {
         if (moveController.HasArrived())
         {
-            npc.stateMachine.ChangeState(npc.stateMachine.SeekState);
+            enemy.stateMachine.ChangeState(enemy.stateMachine.seekState);
         }
     }
 

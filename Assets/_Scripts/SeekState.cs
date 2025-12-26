@@ -32,7 +32,7 @@ public class SeekState : IState
                 {
                     enemy.GetComponent<NavMeshMoveController>().enabled = true;
                     if (!GameManager.Instance.enemiesChasing) GameManager.Instance.enemiesChasing = true;         // Con esto paramos el reloj
-                    enemy.stateMachine.ChangeState(enemy.stateMachine.ChaseState);
+                    enemy.stateMachine.ChangeState(enemy.stateMachine.chaseState);
                 }
             }
         }
