@@ -230,6 +230,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+--- !u!114 &325836404 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3036389064370712132, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
+  m_PrefabInstance: {fileID: 5682113056213588743}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29e616fbd71ffd94b90c28679579abfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NavMeshMoveController
 --- !u!1 &347472672
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +353,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347472672}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &406244521 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3036389064370712132, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
+  m_PrefabInstance: {fileID: 7673050364147723965}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29e616fbd71ffd94b90c28679579abfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NavMeshMoveController
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,6 +808,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &985334986 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3036389064370712132, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
+  m_PrefabInstance: {fileID: 6021081384058397934}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29e616fbd71ffd94b90c28679579abfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NavMeshMoveController
 --- !u!1 &1009855826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,6 +1313,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1833359070 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3036389064370712132, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
+  m_PrefabInstance: {fileID: 4358636041840453040}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29e616fbd71ffd94b90c28679579abfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NavMeshMoveController
 --- !u!1 &1858379264
 GameObject:
   m_ObjectHideFlags: 0
@@ -1927,6 +1971,10 @@ PrefabInstance:
       propertyPath: playerPos
       value: 
       objectReference: {fileID: 1947158302}
+    - target: {fileID: 8366873208080868323, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
+      propertyPath: moveController
+      value: 
+      objectReference: {fileID: 1833359070}
     - target: {fileID: 9214184952968737537, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
       propertyPath: m_Name
       value: Enemy (2)
@@ -2000,6 +2048,10 @@ PrefabInstance:
       propertyPath: playerPos
       value: 
       objectReference: {fileID: 1947158302}
+    - target: {fileID: 8366873208080868323, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
+      propertyPath: moveController
+      value: 
+      objectReference: {fileID: 325836404}
     - target: {fileID: 9214184952968737537, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
@@ -2021,6 +2073,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1947158297}
+    - target: {fileID: 3036389064370712132, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3036389064370712132, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
       propertyPath: playerPos
       value: 
@@ -2073,6 +2129,10 @@ PrefabInstance:
       propertyPath: playerPos
       value: 
       objectReference: {fileID: 1947158302}
+    - target: {fileID: 8366873208080868323, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
+      propertyPath: moveController
+      value: 
+      objectReference: {fileID: 985334986}
     - target: {fileID: 9214184952968737537, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -2146,6 +2206,10 @@ PrefabInstance:
       propertyPath: playerPos
       value: 
       objectReference: {fileID: 1947158302}
+    - target: {fileID: 8366873208080868323, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
+      propertyPath: moveController
+      value: 
+      objectReference: {fileID: 406244521}
     - target: {fileID: 9214184952968737537, guid: 2055c4d9e94ef614f821f558618eecdb, type: 3}
       propertyPath: m_Name
       value: Enemy (3)

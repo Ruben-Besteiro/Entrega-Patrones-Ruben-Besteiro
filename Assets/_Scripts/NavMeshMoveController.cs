@@ -6,7 +6,7 @@ public class NavMeshMoveController : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     [SerializeField] private Transform playerPos;
-    [SerializeField] private NavMeshAgent agent;
+    [SerializeField] public NavMeshAgent agent;
 
     public void StartMovement()
     {

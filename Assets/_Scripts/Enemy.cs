@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour, IObserver
     void Start()
     {
         GameManager.Instance.Subscribe(this);
+        moveController.agent.isStopped = true;
     }
 
     void OnDestroy()
