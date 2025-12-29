@@ -21,6 +21,7 @@ public class ChaseState : IState
     {
         if (moveController.HasArrived())
         {
+            Exit();
             enemy.stateMachine.ChangeState(enemy.stateMachine.seekState);
         }
     }
